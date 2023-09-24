@@ -124,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'profiles_api.UserProfile'
+AUTH_USER_MODEL = 'project_beginner_api.UserProfile'
 
 STATIC_ROOT = 'static/'
 # Default primary key field type
