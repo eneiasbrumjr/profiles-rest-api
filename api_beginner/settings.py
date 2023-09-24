@@ -122,9 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-AUTH_USER_MODEL = 'project_beginner_api.UserProfile'
+STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
 STATIC_ROOT = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
