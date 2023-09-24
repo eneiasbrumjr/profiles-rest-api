@@ -1,3 +1,4 @@
+import os
 """
 Django settings for api_beginner project.
 
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%_i4e2+&5+5%lpuu3qtn4vf!#6&*qzc0h#p4rufx!uq_bm61@k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG',1)))
 
 ALLOWED_HOSTS = []
 
@@ -122,7 +123,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 AUTH_USER_MODEL = 'project_beginner_api.UserProfile'
-
+STATIC_ROOT = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
