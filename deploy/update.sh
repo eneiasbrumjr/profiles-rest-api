@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+PROJECT_BASE_PATH='/usr/local/apps/project_beginner_api'
+
+cd $PROJECT_BASE_PATH
+git pull
+$PROJECT_BASE_PATH/env/bin/python manage.py migrate
+$PROJECT_BASE_PATH/env/bin/python manage.py collectstatic --noinput
+supervisorctl restart project_beginner_api
+
+echo "DONE! :)"
